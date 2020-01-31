@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>User Data</h1>
+    <table>
+        <thead>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Date_Of_Birth</th>
+            <th>Mobile_Number</th>
+        </thead>
+        <tbody>
+        {% for obj in userdata %}
+        <tr>
+            <td>{{obj.Name}}</td>
+            <td>{{obj.Email}}</td>
+            <td>{{obj.Date_Of_Birth}}</td>
+            <td>{{obj.Mobile_Number}}</td>
+            <td><a href="/account/userupdate/{{obj.id}}/">update</a></td>
+            <td><a href="/account/userdelete/{{obj.id}}/">delete</a></td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

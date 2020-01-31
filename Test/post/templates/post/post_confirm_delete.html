@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post">
+    <h1>D you want to delete {{post.post_title}} Record ??</h1>
+    {% csrf_token %}
+    <button type="submit">Delete</button>
+    <a href="/">Cancel</a>
+
+</form>
+</body>
+</html>

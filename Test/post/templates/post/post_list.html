@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Post Information Dash Board</h1>
+    <table>
+        <thead>
+            <th>Post Title</th>
+            <th>Post Details</th>
+            <th>Post Created</th>
+        </thead>
+        {%for post in post_list%}
+            <tr>
+                <td>{{post.post_title | title}}</td>
+                <td>{{post.post_details}}</td>
+                <td>{{post.post_created}}</td>
+                <td><a href="/post/{{post.id}}">Details</a></td>
+                <td><a href="/post/postupdate/{{post.id}}">Update</a></td>
+                <td><a href="/post/postdelete/{{post.id}}">Delete</a></td>
+            </tr>
+        {%endfor%}
+    </table>
+    <br><br><br>
+    <a href="/post/postcreate">Do you want to create New Post</a>
+</body>
+</html>
